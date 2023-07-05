@@ -1,0 +1,56 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 4000px;
+}
+
+.container {
+  padding: 0 16px;
+  display: inherit;
+  flex-direction: inherit;
+  height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.animate {
+  -webkit-transition: all 600ms;
+  -moz-transition: all 600ms;
+  transition: all 600ms;
+}
+
+.animated {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.logo {
+  height: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .logo {
+    height: 30px;
+  }
+
+  .container {
+    padding: 0;
+  }
+}

@@ -1,0 +1,92 @@
+menu, .overlay {
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.overlay {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+}
+.overlay.overlay_visible {
+  z-index: 30;
+  opacity: 0.4;
+}
+
+menu {
+  z-index: 31;
+  position: fixed;
+  top: -100%;
+  background: black;
+  width: 100%;
+  height: 450px;
+  max-height: 100%;
+}
+menu.menu_opened {
+  top: 25px;
+}
+menu .navigation {
+  margin-top: 80px;
+  font-size: 18px;
+}
+menu .navigation li {
+  margin-top: 40px;
+  position: relative;
+  width: fit-content;
+}
+menu .navigation li:hover {
+  cursor: pointer;
+}
+menu .navigation__btn {
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 18px;
+  border: 2px solid white;
+  border-radius: 14px;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  transition: all 250ms;
+}
+menu .navigation__btn:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 767px) {
+  menu.menu_opened {
+    top: -85%;
+  }
+  .overlay.overlay_visible {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+@media (max-height: 440px) {
+  menu .navigation {
+    font-size: 16px;
+  }
+  menu .navigation li {
+    margin-top: 30px;
+  }
+}
+@media (max-height: 400px) {
+  menu .navigation {
+    margin-top: 0;
+    font-size: 14px;
+  }
+  menu .navigation li {
+    margin-top: 25px;
+  }
+  menu .navigation__btn {
+    font-size: 14px;
+    padding: 5px 16px;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

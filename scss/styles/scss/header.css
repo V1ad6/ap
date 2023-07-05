@@ -1,0 +1,143 @@
+.hat {
+  z-index: 32;
+  display: flex;
+  background: black;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+}
+.hat .navigation {
+  display: none;
+}
+
+.hat__btn {
+  position: relative;
+  width: 17px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hat__btn span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  transition: all 250ms;
+}
+.hat__btn span::nth-child(1) {
+  top: 0;
+}
+.hat__btn span:nth-child(2) {
+  top: 6px;
+}
+.hat__btn span:nth-child(3) {
+  top: 12px;
+}
+.hat__btn.hat__btn_clicked span {
+  position: absolute;
+  top: 3px;
+}
+.hat__btn.hat__btn_clicked span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.hat__btn.hat__btn_clicked span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.hat__btn.hat__btn_clicked span:nth-child(3) {
+  opacity: 0;
+}
+
+.navigation {
+  color: white;
+  font-weight: 300;
+  font-size: 13px;
+}
+.navigation ul {
+  display: inherit;
+}
+.navigation li {
+  cursor: pointer;
+  position: relative;
+}
+.navigation li:not(:last-child)::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  height: 2px;
+  width: 0px;
+  background: white;
+  transition: all 300ms;
+}
+.navigation li:not(:last-child):hover::after {
+  left: 2px;
+  width: 95%;
+}
+
+.navigation__btn {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px 14px;
+  border: 2px solid white;
+  border-radius: 14px;
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  transition: all 250ms;
+}
+.navigation__btn:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 767px) {
+  .hat__btn {
+    display: none;
+  }
+  .hat {
+    height: 80px;
+  }
+  .hat .navigation {
+    display: flex;
+  }
+  .hat .navigation ul {
+    align-items: center;
+  }
+  .hat .navigation li:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+@media (min-width: 1080px) {
+  .hat {
+    height: 90px;
+    padding: 0 27px;
+  }
+  .hat .navigation li:not(:last-child) {
+    margin-right: 30px;
+  }
+  .navigation {
+    font-size: 15px;
+  }
+  .navigation__btn {
+    font-size: 16px;
+    padding: 5px 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .hat {
+    padding: 0 140px;
+  }
+  .navigation__btn {
+    padding: 8px 18px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
