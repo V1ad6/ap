@@ -1,5 +1,5 @@
 .leafs {
-  background: url("/public/img/leafs.png") no-repeat;
+  background: url("../public/img/leafs.png") no-repeat;
   background-position-x: right;
   background-size: 2000px;
   height: 600px;

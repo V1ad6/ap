@@ -87,16 +87,16 @@
   opacity: 0.1;
 }
 .specialization__card:nth-child(1) {
-  background-image: url("/public/img/specialization/IMAGE.png");
+  background-image: url("../public/img/specialization/IMAGE.png");
 }
 .specialization__card:nth-child(2) {
-  background-image: url("/public/img/specialization/IMAGE2.png");
+  background-image: url("../public/img/specialization/IMAGE2.png");
 }
 .specialization__card:nth-child(3) {
-  background-image: url("/public/img/specialization/IMAGE3.png");
+  background-image: url("../public/img/specialization/IMAGE3.png");
 }
 .specialization__card:nth-child(4) {
-  background-image: url("/public/img/specialization/IMAGE4.png");
+  background-image: url("../public/img/specialization/IMAGE4.png");
 }
 .specialization__card:not(:first-child) {
   background-position-x: center;
