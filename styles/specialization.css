@@ -1,4 +1,39 @@
+.specialization__card button {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  align-items: center;
+  padding: 0 6px;
+  width: 143px;
+  height: 38px;
+  border-radius: 14px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+.specialization__card button:hover {
+  color: white;
+  background-color: black;
+}
+.specialization__card button:hover > div {
+  background-color: white;
+}
+.specialization__card button > div {
+  height: 26px;
+  width: 26px;
+  background-color: black;
+  border-radius: 8px;
+  margin-right: 8px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+
 .specialization {
+  overflow-x: hidden;
   background-color: black;
   margin-top: -2px;
   padding: 40px 0;
@@ -83,40 +118,6 @@
   max-width: 500px;
   font-size: 13px;
 }
-.specialization__card button {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  display: flex;
-  font-size: 15px;
-  font-weight: 500;
-  align-items: center;
-  padding: 0 6px;
-  width: 143px;
-  height: 38px;
-  border-radius: 14px;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
-}
-.specialization__card button:hover {
-  color: white;
-  background-color: black;
-}
-.specialization__card button:hover > div {
-  background-color: white;
-}
-.specialization__card button > div {
-  height: 26px;
-  width: 26px;
-  background-color: black;
-  border-radius: 8px;
-  margin-right: 8px;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
-}
-
 @media (min-width: 600px) {
   .specialization__card {
     height: 600px;

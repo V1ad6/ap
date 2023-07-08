@@ -1,5 +1,6 @@
 const hatBtn = document.querySelector('.hat__btn');
 const bg = document.querySelectorAll('.movable-bg');
+const scaleBg = document.querySelectorAll('.scalable-bg');
 
 hatBtn.addEventListener('click', () => {
   document.body.classList.toggle('noscroll');
@@ -15,14 +16,13 @@ moveBackground();
 setTimeout(animate, 700);
 
 function moveBackground() {
-  const div = [3, 5];
+  const div = [3, 5, 5];
 
   function move(item, div) {
-    if ((window.pageYOffset - item.offsetTop) >= item.offsetHeight * 1.3) {
-      item.style.backgroundPositionY = (item.offsetHeight * 1.3) + 'px';
-    } else if ((window.pageYOffset + window.innerHeight) <= item.offsetTop - 200) {
-      item.style.backgroundPositionY = (item.offsetTop - 200) + 'px';
-    } else {
+    const top = item.getBoundingClientRect().top - window.innerHeight;
+    const bottom = item.getBoundingClientRect().bottom;
+
+    if (top <= 300 && bottom >= -300) {
       item.style.backgroundPositionY = (window.pageYOffset - item.offsetTop)/div + 'px';
     }
   }
@@ -34,7 +34,7 @@ function moveBackground() {
 
 function animate() {
   document.querySelectorAll('.animate').forEach(item => {
-    if (item.getBoundingClientRect().top < window.innerHeight / 1.4) {
+    if (item.getBoundingClientRect().top < window.innerHeight / 1.3) {
       item.classList.add('animated');
     }
   });

@@ -1,0 +1,100 @@
+.clients {
+  background: black;
+  padding: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.clients__caption h2, .clients__caption h5 {
+  font-weight: 300;
+  text-align: center;
+}
+.clients__caption h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.clients__caption h5 {
+  color: #c0c0c0;
+  font-size: 21px;
+}
+
+.clients__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 1500px;
+}
+.clients__list li {
+  opacity: 0.2;
+}
+.clients__list li:not(:first-child) {
+  margin-top: 120px;
+}
+.clients__list li:nth-child(2n) {
+  transform: translateX(50px);
+}
+.clients__list li:nth-child(2n+1) {
+  transform: translateX(-50px);
+}
+.clients__list li img {
+  width: 140px;
+}
+
+@media (min-width: 767px) {
+  .clients__list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -40px;
+  }
+  .clients__list li {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .clients__list li, .clients__list li:not(:first-child) {
+    margin-top: 130px;
+  }
+  .clients__list li:last-child {
+    margin: 120px auto 0;
+  }
+}
+@media (min-width: 1080px) {
+  .clients__list {
+    margin-top: -40px;
+    justify-content: space-around;
+  }
+  .clients__list li {
+    display: flex;
+    justify-content: center;
+    width: unset;
+  }
+  .clients__list li, .clients__list li:not(:first-child) {
+    margin-top: 130px;
+  }
+  .clients__list li:last-child {
+    margin: 120px 0 0;
+  }
+  .clients__list li:nth-child(1) {
+    transform: translateX(-20px) translateY(50px);
+  }
+  .clients__list li:nth-child(2) {
+    transform: translateX(-10px) translateY(50px);
+  }
+  .clients__list li:nth-child(3) {
+    transform: translateY(50px);
+  }
+  .clients__list li:nth-child(4) {
+    transform: translateX(10px) translateY(50px);
+  }
+  .clients__list li:nth-child(5) {
+    transform: translateX(20px) translateY(50px);
+  }
+}
+
+/*# sourceMappingURL=clients.css.map */

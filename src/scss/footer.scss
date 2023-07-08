@@ -1,0 +1,174 @@
+footer {
+  background: black;
+  color: white;
+  padding: 33px 0;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+
+  p, dt {
+    color: #c0c0c0;
+  }
+
+  dl {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+  }
+
+  dt {
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin-top: 13px;
+  }
+
+  .business {
+    margin: 60px 0;
+  }
+}
+
+.footer__sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 46px 0;
+  margin: 37px auto;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+
+    &:nth-child(1) {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    } 
+
+    &:nth-child(2) {
+      color: #c0c0c0;
+      margin-top: 10px;
+    } 
+  }
+
+  .send {
+    display: flex;
+    width: 260px;
+    height: 36px;
+    padding: 5px 8px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 20px;
+
+    input {
+      width: calc(100% - 65px);
+      height: 100%;
+      margin-right: 5px;
+      border: none;
+      outline: none;
+      font-size: 13px;
+    }
+
+    button {
+      font-size: 13px;
+      width: 60px;
+      border-radius: 11px;
+      background: #000;
+      color: white;
+      transition: all 300ms;
+
+      &:hover {
+        background: #c0c0c0;
+        color: #000;
+      }
+    }
+  }
+}
+
+.footer__social-media {
+  display: flex;
+  flex-direction: column;
+  color: #c0c0c0;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 112px;
+    margin: 33px auto 0;
+
+    img:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .footer__nav {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .business {
+      margin: 0;
+    }
+
+    >div { 
+      width: 45%;
+    }
+
+    dl {
+      width: 55%;
+      justify-content: space-around;
+    }
+  }
+
+  .footer__sub {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .text {
+      text-align: left;
+    }
+
+    .send {
+      margin: 0;
+    }
+  }
+
+  .footer__social-media {
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  footer {
+    padding: 0 50px;
+  }
+
+  .footer__nav {
+    >div { 
+      width: 55%;
+    }
+
+    dl {
+      width: 40%;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  footer {
+    padding: 33px 136px;
+  }
+}

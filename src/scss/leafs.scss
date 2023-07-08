@@ -1,0 +1,13 @@
+.leafs {
+  background: url('/public/img/leafs.png') no-repeat;
+  background-position-x: right;
+  background-size: 2000px;
+  height: 600px;
+  overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  .leafs {
+    background-size: 135%;
+  }
+}

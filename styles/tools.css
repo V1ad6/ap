@@ -1,0 +1,133 @@
+.tools__text button {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  align-items: center;
+  padding: 0 6px;
+  width: 143px;
+  height: 38px;
+  border-radius: 14px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+.tools__text button:hover {
+  color: white;
+  background-color: black;
+}
+.tools__text button:hover > div {
+  background-color: white;
+}
+.tools__text button > div {
+  height: 26px;
+  width: 26px;
+  background-color: black;
+  border-radius: 8px;
+  margin-right: 8px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools__text,
+.tools__img {
+  height: 540px;
+}
+
+.tools__text {
+  background: #000;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tools__text h5, .tools__text h2, .tools__text p, .tools__text a {
+  transform: translateX(-70px) translateY(10px);
+  opacity: 0.1;
+}
+.tools__text h2, .tools__text p {
+  color: white;
+  font-size: 14px;
+}
+.tools__text h5, .tools__text h2, .tools__text p {
+  font-weight: 300;
+}
+.tools__text h5 {
+  color: #C0C0C0;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.tools__text h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 13px 0 16px;
+}
+.tools__text p {
+  max-width: 400px;
+}
+.tools__text button {
+  margin-top: 26px;
+}
+
+.tools__img {
+  position: relative;
+  overflow: hidden;
+}
+.tools__img .pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+}
+.tools__img .info {
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 140px);
+  height: 18px;
+}
+
+@media (min-width: 1080px) {
+  .tools {
+    flex-direction: row;
+  }
+  .tools__text,
+  .tools__img {
+    width: 50%;
+  }
+  .tools__text {
+    padding: 0 50px;
+    align-items: start;
+    text-align: start;
+  }
+  .tools__text .container {
+    width: fit-content;
+  }
+  .tools__text h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 6px 0 14px;
+  }
+  .tools__text p {
+    max-width: 600px;
+  }
+  .tools__img .info {
+    top: unset;
+    bottom: 30px;
+    right: 40px;
+    left: unset;
+  }
+}
+
+/*# sourceMappingURL=tools.css.map */
