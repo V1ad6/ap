@@ -62,19 +62,19 @@
   opacity: 0.1;
 
   &:nth-child(1) {
-    background-image: url('/public/img/specialization/IMAGE.png');
+    background-image: url('../public/img/specialization/IMAGE.png');
   }
 
   &:nth-child(2) {
-    background-image: url('/public/img/specialization/IMAGE2.png');
+    background-image: url('../public/img/specialization/IMAGE2.png');
   }
 
   &:nth-child(3) {
-    background-image: url('/public/img/specialization/IMAGE3.png');
+    background-image: url('../public/img/specialization/IMAGE3.png');
   }
 
   &:nth-child(4) {
-    background-image: url('/public/img/specialization/IMAGE4.png');
+    background-image: url('../public/img/specialization/IMAGE4.png');
   }
 
   &:not(:first-child) {
